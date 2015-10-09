@@ -24,7 +24,7 @@ Features:
 - Support for Magento multi stores configuration.
 - Module does not have any extra options or configuration.
 - Full open source code
-- Tested on Magento CE 1.7.0.2
+- Tested on Magento CE 1.7.0.2 - 1.9.2.1 and Magento EE 1.12.0.0 – 1.14.2.0
 
 Installation:
 -------------------------
