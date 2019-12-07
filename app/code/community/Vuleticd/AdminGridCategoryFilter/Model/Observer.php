@@ -32,18 +32,8 @@ class Vuleticd_AdminGridCategoryFilter_Model_Observer
 					'type'  => 'options',
 					'options'	=> Mage::getSingleton('admingridcategoryfilter/system_config_source_category')->toOptionArray(),
 					'renderer'	=> 'admingridcategoryfilter/catalog_product_grid_render_category',
-					'filter_condition_callback' => array($this, 'filterCallback'),
+					'filter_condition_callback' => array(Mage::getBlockSingleton('admingridcategoryfilter/catalog_product_grid'), 'filterCallback'),
 			),'name');
 		}
 	}
-	
-	public function filterCallback($collection, $column)
-	{
-		$value = $column->getFilter()->getValue();
-		$_category = Mage::getModel('catalog/category')->load($value);
-		$collection->addCategoryFilter($_category);
-		
-		return $collection;
-	}
-	
 }
